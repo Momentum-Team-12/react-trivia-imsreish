@@ -16,12 +16,13 @@ export function Categories() {
 
     return (
         <div>
+            <p></p>
             {apiResults.map((apiResult) => {
                 return (
-                    <li key={apiResult.name}>
+                    <li key={apiResult.id}>
+                        <p>{apiResult.id}</p>
                         <p>{apiResult.name}</p>
-                        <p>{apiResult.bio}</p>
-                        <p>{apiResult.location}</p>
+                        <p>{apiResult.merges_url}</p>
                     </li>
                 )
             })}
