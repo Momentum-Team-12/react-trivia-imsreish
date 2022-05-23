@@ -7,7 +7,7 @@ export function Categories() {
 
     useEffect(() => {
         axios
-            .get(`https://api.github.com/users/imsreish/repos`)
+            .get(`https://opentdb.com/api_category.php`)
             .then((res) => {
                 console.log(res.data)
                 displayApiResults(res.data)
@@ -16,14 +16,19 @@ export function Categories() {
 
     return (
         <div>
-            <p></p>
-            {apiResults.map((apiResult) => {
+            <p>Results go here:</p>
+            {apiResults.map((apiResult, index) => {
                 return (
-                    <li key={apiResult.id}>
-                        <p>{apiResult.id}</p>
-                        <p>{apiResult.name}</p>
-                        <p>{apiResult.merges_url}</p>
-                    </li>
+                    <div key={index}>
+                        <p>{index}</p>
+                        <p>{apiResult.created_at}</p>
+                        <p>{apiResult.location}</p>
+                        {apiResult.content.map((eachCat) => (
+                            <div key={eachCat.index}>
+                                <h1>{eachCat.category}</h1>
+                            </div>
+                        ))}
+                    </div>
                 )
             })}
         </div>
