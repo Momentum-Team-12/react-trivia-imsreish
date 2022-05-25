@@ -12,32 +12,32 @@ export function Categories() {
                 console.log(res.data.trivia_categories)
                 setCatObjects(res.data.trivia_categories)
             })
-    }, [])
+    },
+        [])
+
+
+    const showCatName = (catName) => {
+        console.log(catName)
+        return (
+            window.alert(`you have selected ${catName}`)
+        )
+    }
 
     return (
         <div>
             <p>The results are:</p>
             {catObjects.map((catObject, index) => {
+                const catName = catObject.name
                 return (
                     <div className="catContainer" key={index}>
-                        <button onClick={() => setSelectedCat(catObject.id)}>{catObject.name}</button>
-                        <CatOptions
-                            setSelectedCat={setSelectedCat}
-                            isSelected={selectedCat === catObject.name}
-                        />
+                        <button onClick={() => showCatName(catName)}>{catName}</button>
                     </div>
                 )
             })}
-        </div>
+        </div >
     )
 }
 
-export function CatOptions({ setSelectedCat, isSelected }) {
-
-    return (
-        <div>
-            <button>I am selected!</button>
-            {/* <div>{isSelected}</div> */}
-        </div>
-    )
-}
+// export function showCatName(catObject) {
+//     alert(`Hello! You selected ${catObject.name}`);
+// }
