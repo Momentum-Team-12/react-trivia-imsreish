@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export function Categories() {
     const [catObjects, setCatObjects] = useState([])
-    const [selectedCat, setSelectedCat] = useState(null)
+    // const [selectedCat, setSelectedCat] = useState(null)
 
     useEffect(() => {
         axios
