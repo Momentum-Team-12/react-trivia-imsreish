@@ -1,7 +1,8 @@
+import React from 'react';
 import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
-import { Categories, CatOptions } from './components/Categories'
+import { Categories } from './components/Categories'
 
 
 function App() {
