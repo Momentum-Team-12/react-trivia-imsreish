@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap') {}
+
+.App {
+  text-align: center;
+}
+
+* {
+  font-family: 'Jost', sans-serif;
+  color: #ffffff
+}
+
+body {
+  background-color: #264578;
+}
+
+.catContainer {
+  display: flex;
+  align-content: center;
+}
+
+button {
+  color: #090909;
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 0.5em;
+  width: 30vw;
+  height: 60px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  border-radius: 50px;
+  transition: all .2s;
+}
+
+button:hover {
+  border: 2px solid white;
+  font-size: 18px;
+}
+
+button:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+    -4px -4px 12px #ffffff;
+}

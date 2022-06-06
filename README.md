@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/609c4257-aa89-4bc5-ae95-fc86cd2dcc6f/deploy-status)](https://app.netlify.com/sites/cute-queijadas-3c2d64/deploys)
+
 # Build a Trivia Game
 
 For this project, you will use React to build a trivia game powered by [the Open Trivia Database](https://opentdb.com/).
